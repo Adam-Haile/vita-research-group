@@ -5,6 +5,16 @@ INPUT_DIRECTORY = "vidIn/"
 VIDEO_OUTPUT_DIRECTORY = "vidOut/"
 AUDIO_OUTPUT_DIRECTORY = "audioOut/"
 
+if not os.path.exists(INPUT_DIRECTORY):
+    print("Input directory doesn't exist")
+    exit()
+
+if not os.path.exists(VIDEO_OUTPUT_DIRECTORY):
+    os.mkdir(VIDEO_OUTPUT_DIRECTORY)
+
+if not os.path.exists(AUDIO_OUTPUT_DIRECTORY):
+    os.mkdir(AUDIO_OUTPUT_DIRECTORY)
+
 input_videos = os.listdir(INPUT_DIRECTORY)
 
 for video_name in input_videos:
